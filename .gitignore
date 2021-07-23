@@ -1,0 +1,11 @@
+
+*__pycache__*
+settings.json
+*.pyc
+
+
+.vscode
+.env
+# db.sqlite3
+
+migerente_test/__pycache__/settings.cpython-38.pyc
