@@ -28,25 +28,6 @@ class RoomType(models.Model):
         return self.type_name
 
 
-class Room(models.Model):
-    """ Room model for guest"""
-
-    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
-    room_name = models.CharField(max_length=150)
-    description = models.TextField(blank=True, null=True)
-    room_type = models.ForeignKey(RoomType, on_delete=models.RESTRICT)
-    current_price = models.DecimalField(max_digits=10, decimal_places=2)
-    is_active = models.BooleanField(default=True)
-
-    class Meta:
-        db_table = "rooms"
-        verbose_name = "room"
-        verbose_name_plural = "rooms"
-
-    def __str__(self):
-        return '%s %s' % (self.room_name, self.room_type)
-
-
 class ReservationStatusCalalog(models.Model):
     """ this model storage all type of reservation """
 
@@ -79,6 +60,23 @@ class Guest(models.Model):
 
 # Tables with relations
 
+class Room(models.Model):
+    """ Room model for guest"""
+
+    hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE)
+    room_name = models.CharField(max_length=150)
+    description = models.TextField(blank=True, null=True)
+    room_type = models.ForeignKey(RoomType, on_delete=models.RESTRICT)
+    current_price = models.DecimalField(max_digits=10, decimal_places=2)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        db_table = "rooms"
+        verbose_name = "room"
+        verbose_name_plural = "rooms"
+
+    def __str__(self):
+        return '%s %s' % (self.room_name, self.room_type)
 
 class Reservation(models.Model):
     """ Reservation model for save data reservation """

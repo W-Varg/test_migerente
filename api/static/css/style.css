@@ -1,0 +1,28 @@
+.w-200 {
+     width: 300px;
+}
+
+.border-orange {
+     border-color: #ff6815 !important;
+}
+
+.bg-orange {
+     background-color: #ff6815;
+}
+
+.btn-orange {
+     color: #fff;
+     background-color: #ff6815;
+     border-color: #ff6815;
+}
+
+#scrollToTopBtn {
+     background-color: black;
+     border: none;
+     border-radius: 50%;
+     color: white;
+     /* cursor: pointer; */
+     font-size: 16px;
+     line-height: 48px;
+     width: 48px
+}

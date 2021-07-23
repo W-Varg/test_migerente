@@ -1,0 +1,51 @@
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>index</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+     <!-- local libraries css  -->
+     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+     <header>
+          <div class="navbar navbar-dark bg-dark shadow-sm">
+               <div class="container">
+
+                    <a href="/" class="navbar-brand d-flex align-items-center">
+                         <strong class="mx-2">Hotel Reservations</strong>
+                    </a>
+               </div>
+          </div>
+     </header>
+     <main>
+          <div class="album py-5 bg-light">
+               <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 text-center" id="products_list">
+                    </div>
+                    <nav aria-label="Page navigation example">
+                         <ul class="pagination justify-content-center" id="pagination">
+                         </ul>
+                    </nav>
+               </div>
+          </div>
+     </main>
+
+     <footer class="text-muted py-5">
+          <div class="container">
+               <p class="mb-0"><a href="https://github.com/W-Varg/test_migerente"> github </a></p>
+          </div>
+     </footer>
+     <script src="{% static 'js/apps.js' %}"></script>
+</body>
+
+</html>
